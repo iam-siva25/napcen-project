@@ -1,0 +1,160 @@
+/* 🌟 Image & Content Section */
+.image-content-section {
+  width: 100%;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #0a192f, #1a2a4a);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 🏆 Section Header */
+.section-header {
+  margin-bottom: 50px;
+}
+
+.animated-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.image-content-section.visible .animated-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 600px;
+  margin: 10px auto;
+  opacity: 0.8;
+}
+
+/* 📌 Grid Layout */
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* 🎨 Content Item */
+.content-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.image-content-section.visible .content-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* 🖼️ Image Container */
+.image-container {
+  position: relative;
+  flex: 1;
+  max-width: 45%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* 🔥 Image Overlay */
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+/* ✏️ Text Content */
+.text-content {
+  flex: 1;
+  max-width: 45%;
+  text-align: left;
+}
+
+.text-content h3 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* 🚀 Learn More Button */
+.learn-more {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#6e8efb, #a777e3);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 71, 126, 0.4);
+}
+
+.learn-more:hover {
+  background: linear-gradient(135deg,#6e8efb, #a777e3);
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .content-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container,
+  .text-content {
+    max-width: 100%;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+}
