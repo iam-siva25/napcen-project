@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import SlideshowSection from "./SildeshowSection";
 import ImageContentSection from "./ImageContentSection";
-import heroVideo from "../assets/images/header-bg.mp4.mov";
+import heroVideo from "../assets/images/slide1.jpg";
 import ParticlesBackground from "./ParticlesBackground";
 
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./About.css";
-import aboutImage from "../assets/images/header-bg.mp4.mov"; // Replace with actual image
+import aboutImage from "../assets/images/slide1.jpg"; // Replace with actual image
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
